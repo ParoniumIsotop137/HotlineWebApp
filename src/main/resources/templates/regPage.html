@@ -6,6 +6,67 @@
     <title>Adatok rögzítése</title>
 </head>
 <body>
+    <h1>Hívásadatok rögzítése</h1>
+    <br></br>
     
+    <form action=""  method="post">
+    <div>
+        <label for="openedFrom">Jegyet nyitotta:</label><input type="text"  name="openedFrom" id="opened-from">
+    </div>
+    <br></br>
+    <div>
+        <label for="technicianName">Techniker:</label><input type="text"  name="technicianName" id="technician-name" >
+    </div>
+    <br></br>
+    <div>
+        <label for="localizationNumber">Standort oder VPSZ Nummer 49/:</label><input type="text"  name="localizationNumber" id="vpsz-number">
+    </div>
+    <br></br>
+    <div>
+        <button>Davin/Icinga</button>
+        <label for="davin-number">Davin:</label><input type="text" name="davin-number" id="davin-number">
+        <label for="icinga-number">Icinga:</label><input type="text" name="icinga-number" id="icinga-number">
+    </div>
+    <br></br>
+    <div>
+        <label for="phoneNumber">Telefonnummer:</label><input type="text" name="phoneNumber" id="phone-number" >
+    </div>
+    <br></br>
+    <div>
+        <label for="lineNumber">Linie:</label>
+        <select name="lineNumber"  id="line-number">
+            <option value="1">1</option>
+            <option value="1">2</option>
+            <option value="1">3</option>
+            <option value="1">4</option>
+            <option value="1">5</option>
+            <option value="1">6</option>
+            <option value="1">7</option>
+            <option value="1">8</option>
+            <option value="1">9</option>
+            <option value="1">10</option>
+            <option value="1">11</option>
+            <option value="1">12</option>
+            <option value="1">13</option>
+            <option value="1">14</option>
+            <option value="1">15</option>
+        </select>
+    </div>
+    <br></br>
+    <div>
+        <label for="sdNumber">SD Nummer:</label><input type="number" name="sdNumber" id="sd-number">
+    </div>
+    <br></br>
+    <div>
+        <label for="closedFrom">Jegyet zárta:</label><input type="text" name="closedFrom" id="closed-from">
+    </div>
+    <br></br>
+    <div>
+        <label for="isClosed">Visszatelefonált már?</label><input type="checkbox"  name="isClosed" id="isClosed">
+    </div>
+    
+    <br></br>
+    <button id="save">Mentés táblázatba</button>
+    </form>
 </body>
 </html>
