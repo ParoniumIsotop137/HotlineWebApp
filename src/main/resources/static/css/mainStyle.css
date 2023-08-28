@@ -1,0 +1,20 @@
+h1{
+
+    text-align: center;
+}
+.buttons-cont{
+
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+#toRegPage, #toTablePage{
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
