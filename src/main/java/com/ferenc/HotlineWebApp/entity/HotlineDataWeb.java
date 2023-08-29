@@ -15,7 +15,7 @@ public class HotlineDataWeb {
 	private String technicianName;
 	private String phoneNumber;
 	private String localizationNumber;
-	private int lineNumber;
+	private Integer lineNumber;
 	private String closedFrom;
 	private boolean isClosed;
 	
@@ -72,11 +72,11 @@ public class HotlineDataWeb {
 		this.localizationNumber = localizationNumber;
 	}
 
-	public int getLineNumber() {
+	public Integer getLineNumber() {
 		return lineNumber;
 	}
 
-	public void setLineNumber(int lineNumber) {
+	public void setLineNumber(Integer lineNumber) {
 		this.lineNumber = lineNumber;
 	}
 
