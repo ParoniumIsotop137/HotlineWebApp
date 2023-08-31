@@ -6,6 +6,31 @@
     <title>Hívások adatai</title>
 </head>
 <body>
-    
+    <h1>Hívások listája</h1>
+    <br></br>
+    <div>
+        <table>
+            <tr>
+                <th>Dátum:</th>
+                <th>Jegyszám:</th>
+                <th>Jegyet nyitotta:</th>
+                <th>Technikus neve:</th>
+                <th>Telefonszáma:</th>
+                <th>Standort:</th>
+                <th>Linie:</th>
+                <th>Jegyet zárta:</th>
+            </tr>
+            <tr th:each="lista : &{lista_elemei}">
+                <td th:text="${lista.elem}"></td>
+                <td th:text="${lista.elem}"></td>
+                <td th:text="${lista.elem}"></td>
+                <td th:text="${lista.elem}"></td>
+                <td th:text="${lista.elem}"></td>
+                <td th:text="${lista.elem}"></td>
+                <td th:text="${lista.elem}"></td>
+                <td th:text="${lista.elem}"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
