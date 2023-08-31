@@ -1,5 +1,6 @@
 package com.ferenc.HotlineWebApp.entity;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 import org.springframework.stereotype.Component;
@@ -23,6 +24,23 @@ public class HotlineDataWeb {
 	public HotlineDataWeb() {
 		
 	}
+	
+
+	public HotlineDataWeb(LocalDate date, int sdNumber, String openedFrom, String technicianName, String phoneNumber,
+			String localizationNumber, Integer lineNumber, String closedFrom, boolean isClosed) {
+		this.date = date;
+		this.sdNumber = sdNumber;
+		this.openedFrom = openedFrom;
+		this.technicianName = technicianName;
+		this.phoneNumber = phoneNumber;
+		this.localizationNumber = localizationNumber;
+		this.lineNumber = lineNumber;
+		this.closedFrom = closedFrom;
+		this.isClosed = isClosed;
+		
+	}
+
+
 
 	public LocalDate getDate() {
 		return date;

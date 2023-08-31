@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import org.springframework.stereotype.Service;
 
 import com.ferenc.HotlineWebApp.Dao.DatabaseController;
+import com.ferenc.HotlineWebApp.entity.HotlineDataWeb;
 @Service
 public class DataService {
 	
@@ -22,6 +23,17 @@ public class DataService {
 			}
 		
 		
+	}
+	
+	public void saveData(HotlineDataWeb data) {
+		
+		try {
+			
+			dbControl.insertData(data);
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	

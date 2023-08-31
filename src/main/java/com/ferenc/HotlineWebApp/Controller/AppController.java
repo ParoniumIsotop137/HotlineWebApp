@@ -37,7 +37,9 @@ public class AppController {
 	public String fromRegPage(@ModelAttribute HotlineDataWeb data, @RequestParam(name = "isClosed", required = false, defaultValue = "false") boolean isClosed) {
 		data.setClosed(isClosed);
 		data.setDate();
-		System.out.println(data.toString());
+		
+		dService.saveData(data);
+		
 		return "regPage";
 		
 	}
