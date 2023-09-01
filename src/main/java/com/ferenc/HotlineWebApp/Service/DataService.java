@@ -1,6 +1,7 @@
 package com.ferenc.HotlineWebApp.Service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,17 @@ public class DataService {
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
+	}
+	
+	public List<HotlineDataWeb> showData(){
+		try {
+			return dbControl.getData();
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		return null;
+		
 	}
 	
 	
