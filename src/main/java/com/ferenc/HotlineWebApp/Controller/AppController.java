@@ -1,6 +1,7 @@
 package com.ferenc.HotlineWebApp.Controller;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -41,6 +42,16 @@ public class AppController {
 		dService.saveData(data);
 		
 		return "regPage";
+		
+	}
+	
+	@GetMapping("/calldata")
+	public String showTablePageData(Model model) {
+		
+		List<HotlineDataWeb> data = dService.showData();
+		model.addAttribute("data_item", data);
+		
+		return "tablePage";
 		
 	}
 	

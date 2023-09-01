@@ -69,11 +69,14 @@ public class DatabaseController {
 			
 			ResultSet res = pst.executeQuery();
 			
-			if(res.next()) {
+			while(res.next()) {
 				
 				dataList.add(new HotlineDataWeb((res.getDate("datum").toLocalDate()), res.getInt("jegyszam"), res.getString("jegyet_nyitotta"), res.getString("technikus_neve"), res.getString("telefonszama"), res.getString("standort"), res.getInt("linie"), res.getString("jegyet_zarta"), res.getBoolean("visszahivott")));
 				
 			}
+			
+			res.close();
+			pst.clearParameters();
 			
 		} catch (SQLException e) {
 			throw new SQLException("Hiba az adatok betöltésekor: "+e.getMessage());

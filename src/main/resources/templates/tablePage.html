@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hívások adatai</title>
+    <link th:href="@{/css/tableStyle.css}" href="../static/css/tableStyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h1>Hívások listája</h1>
@@ -20,15 +21,15 @@
                 <th>Linie:</th>
                 <th>Jegyet zárta:</th>
             </tr>
-            <tr th:each="lista : &{lista_elemei}">
-                <td th:text="${lista.elem}"></td>
-                <td th:text="${lista.elem}"></td>
-                <td th:text="${lista.elem}"></td>
-                <td th:text="${lista.elem}"></td>
-                <td th:text="${lista.elem}"></td>
-                <td th:text="${lista.elem}"></td>
-                <td th:text="${lista.elem}"></td>
-                <td th:text="${lista.elem}"></td>
+            <tr th:each="data : ${data_item}">
+                <td th:text="${data.date}"></td>
+                <td th:text="${data.sdNumber}"></td>
+                <td th:text="${data.openedFrom}"></td>
+                <td th:text="${data.technicianName}"></td>
+                <td th:text="${data.phoneNumber}"></td>
+                <td th:text="${data.localizationNumber}"></td>
+                <td th:text="${data.lineNumber}"></td>
+                <td th:text="${data.closedFrom}"></td>
             </tr>
         </table>
     </div>
