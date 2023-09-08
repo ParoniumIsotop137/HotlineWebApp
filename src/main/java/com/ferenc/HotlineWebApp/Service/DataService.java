@@ -48,5 +48,16 @@ public class DataService {
 		
 	}
 	
-	
+	 public void updateData(HotlineDataWeb hotlineData) {
+		 
+		 try {
+			 
+			dbControl.updateData(hotlineData);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+	 }
 }
