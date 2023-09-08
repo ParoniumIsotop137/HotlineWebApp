@@ -9,6 +9,7 @@
 <body>
     <h1>Hívások listája</h1>
     <br></br>
+    <form action="/update" method="post">
     <div>
         <table>
             <tr>
@@ -30,10 +31,11 @@
                 <td th:text="${data.localizationNumber}"></td>
                 <td th:text="${data.lineNumber}"></td>
                 <td th:text="${data.closedFrom}"></td>
-                <td><input type="checkbox" name="selectedData" value="${data.id}"></td>
+                <td><input type="checkbox" name="selectedData" aria-selected="true" value="${data.phoneNumber}" ></td>
             </tr>
         </table>
         <button type="submit">Kijelölt sor módosítása</button> <button type="submit">Kijelölt sor törlése</button>
     </div>
+    </form>
 </body>
 </html>

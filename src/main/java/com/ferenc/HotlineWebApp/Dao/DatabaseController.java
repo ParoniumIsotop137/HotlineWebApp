@@ -132,6 +132,33 @@ public class DatabaseController {
 		}
 		
 	}
+
+	public HotlineDataWeb getOneRow(int sdNumber) throws SQLException {
+	
+		
+		HotlineDataWeb data = null;
+		
+		try {
+			pst = conn.prepareStatement("Select * from calldata where jegyszam=?");
+			pst.setInt(1, sdNumber);
+			
+			ResultSet res = pst.executeQuery();
+			
+			if(res.next()) {
+				
+				data = new HotlineDataWeb((res.getDate("datum").toLocalDate()), res.getInt("jegyszam"), res.getString("jegyet_nyitotta"), res.getString("technikus_neve"), res.getString("telefonszama"), res.getString("standort"), res.getInt("linie"), res.getString("jegyet_zarta"), res.getBoolean("visszahivott"));
+				
+			}
+			
+			res.close();
+			pst.clearParameters();
+			
+		} catch (Exception e) {
+			throw new SQLException("Hiba az adatok módosításakor: "+e.getMessage());
+		}
+
+		return data;
+	}
 	
 	
 	

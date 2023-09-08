@@ -60,4 +60,17 @@ public class DataService {
 		}
 		 
 	 }
+	 
+	 public HotlineDataWeb getSingleData(int sdNumber) {
+		 
+		 try {
+			 
+			return dbControl.getOneRow(sdNumber);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	 }
 }

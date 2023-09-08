@@ -55,6 +55,16 @@ public class AppController {
 		
 	}
 	
+	@PostMapping("/update")
+	public String showTablePageData(@RequestParam("selectedData") String data, Model model) {
+		
+		
+		
+		System.out.println(data);
+		return "tablePage";
+		
+	}
+	
 	
 	
 }
