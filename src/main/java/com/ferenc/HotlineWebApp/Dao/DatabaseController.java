@@ -91,17 +91,18 @@ public class DatabaseController {
 		
 		try {
 			
-			pst = conn.prepareStatement("Update table calldata datum=?, jegyszam=?, jegyet_nyitotta=?, technikus_neve=?, standort=?, linie=?, jegyet_zarta=?, visszahivott=? where telefonszama=?");
+			pst = conn.prepareStatement("Update calldata set datum=?, jegyet_nyitotta=?, technikus_neve=?, telefonszama=?, standort=?, linie=?, jegyet_zarta=?, visszahivott=? where jegyszam=?");
 			
 			pst.setDate(1, Date.valueOf(data.getDate()));
-			pst.setInt(2, data.getSdNumber());
-			pst.setString(3, data.getOpenedFrom());
-			pst.setString(4, data.getTechnicianName());
+			pst.setString(2, data.getOpenedFrom());
+			pst.setString(3, data.getTechnicianName());
+			pst.setString(4, data.getPhoneNumber());
 			pst.setString(5, data.getLocalizationNumber());
 			pst.setInt(6, data.getLineNumber());
 			pst.setString(7, data.getClosedFrom());
 			pst.setBoolean(8, data.isClosed());
-			pst.setString(9, data.getPhoneNumber());
+			
+			pst.setInt(9, data.getSdNumber());
 			
 			pst.executeUpdate();
 			
