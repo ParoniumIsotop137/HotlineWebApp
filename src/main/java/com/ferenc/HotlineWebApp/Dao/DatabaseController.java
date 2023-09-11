@@ -116,12 +116,12 @@ public class DatabaseController {
 		
 	}
 	
-	public void deleteData(HotlineDataWeb data) throws SQLException {
+	public void deleteData(int sdNumber) throws SQLException {
 		
 		try {
 			
-			pst =conn.prepareStatement("Delete from calldata where telefonszama=?");
-			pst.setString(9, data.getPhoneNumber());
+			pst =conn.prepareStatement("Delete from calldata where jegyszam=?");
+			pst.setInt(1, sdNumber);
 			
 			pst.executeUpdate();
 			

@@ -55,8 +55,7 @@ public class DataService {
 			dbControl.updateData(hotlineData);
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		 
 	 }
@@ -68,9 +67,19 @@ public class DataService {
 			return dbControl.getOneRow(sdNumber);
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return null;
+	 }
+	 
+	 public void deleteData(int sdNumber) {
+		 
+		 try {
+			 
+			dbControl.deleteData(sdNumber);
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 	 }
 }
