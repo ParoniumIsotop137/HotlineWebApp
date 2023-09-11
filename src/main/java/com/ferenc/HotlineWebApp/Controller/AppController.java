@@ -56,11 +56,12 @@ public class AppController {
 	}
 	
 	@PostMapping("/update")
-	public String showTablePageData(@RequestParam("selectedData") String data, Model model) {
+	public String showTablePageData(@ModelAttribute("selectedData") int sdNumber, Model model) {
+		
+		HotlineDataWeb hotlineData = dService.getSingleData(sdNumber);
 		
 		
-		
-		System.out.println(data);
+		System.out.println(hotlineData.toString());
 		return "tablePage";
 		
 	}

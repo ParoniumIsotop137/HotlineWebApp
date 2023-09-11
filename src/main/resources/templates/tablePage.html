@@ -22,7 +22,7 @@
                 <th>Linie:</th>
                 <th>Jegyet zárta:</th>
             </tr>
-            <tr th:each="data : ${data_item}">
+            <tr role="row" th:each="data : ${data_item}">
                 <td th:text="${data.date}"></td>
                 <td th:text="${data.sdNumber}"></td>
                 <td th:text="${data.openedFrom}"></td>
@@ -31,7 +31,7 @@
                 <td th:text="${data.localizationNumber}"></td>
                 <td th:text="${data.lineNumber}"></td>
                 <td th:text="${data.closedFrom}"></td>
-                <td><input type="checkbox" name="selectedData" aria-selected="true" value="${data.phoneNumber}" ></td>
+                <td><input type="checkbox" name="selectedData" aria-selected="true" th:value="${data.sdNumber}"></td>
             </tr>
         </table>
         <button type="submit">Kijelölt sor módosítása</button> <button type="submit">Kijelölt sor törlése</button>
