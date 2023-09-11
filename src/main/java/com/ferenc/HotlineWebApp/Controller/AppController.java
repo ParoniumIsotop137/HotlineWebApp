@@ -65,6 +65,28 @@ public class AppController {
 		
 	}
 	
+	@PostMapping("/confirm")
+	public String fromUpdatePage(@ModelAttribute HotlineDataWeb data, @RequestParam(name = "isClosed", required = false, defaultValue = "false") boolean isClosed) {
+		
+		data.setClosed(isClosed);
+		data.setDate();
+		
+		dService.updateData(data);
+		
+		return "confirmPage";
+		
+	}
+	
+	@PostMapping("/delete")
+	public String deleteSelectedData(@ModelAttribute("selectedData") HotlineDataWeb data) {
+		
+		System.out.println(data.getSdNumber());
+		dService.deleteData(data.getSdNumber());
+		
+		return "confirmPage";
+		
+	}
+	
 	
 	
 }

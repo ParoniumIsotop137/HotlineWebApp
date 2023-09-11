@@ -8,7 +8,7 @@
 <body>
     <h1>Módosítás</h1>
     <br></br>
-    <form action="updatePage.html"  method="post">
+    <form action="confirm" method="post">
     <div>
         <label>Jegyet nyitotta:</label><input type="text" th:value="${selectedData.openedFrom}" name="openedFrom" id="opened-from">
     </div>
@@ -60,6 +60,10 @@
     </div>
     <br></br>
     <button id="save">Mentés</button>
+    </form>
+    <form action="/delete" method="post">
+        <input type="hidden" name="sdNumber" th:value="${selectedData.sdNumber}">
+        <button type="submit" id="delete">Adatok törlése</button>
     </form>
 </body>
 </html>
