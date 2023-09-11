@@ -55,4 +55,16 @@ public class AppController {
 		
 	}
 	
+	@PostMapping("/update")
+	public String showTablePageData(@ModelAttribute("selectedData") int sdNumber, Model model) {
+		
+		HotlineDataWeb hotlineData = dService.getSingleData(sdNumber);
+		
+		model.addAttribute("selectedData", hotlineData);
+		return "updatePage";
+		
+	}
+	
+	
+	
 }

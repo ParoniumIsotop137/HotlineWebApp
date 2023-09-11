@@ -52,7 +52,7 @@ public class DatabaseController {
 			
 			pst.clearParameters();
 			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			throw new SQLException("Hiba az adatok mentésekor: "+e.getMessage());
 		}
 		
@@ -78,13 +78,86 @@ public class DatabaseController {
 			res.close();
 			pst.clearParameters();
 			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			throw new SQLException("Hiba az adatok betöltésekor: "+e.getMessage());
 		}
 		
 		return dataList;
 		
 		
+	}
+	
+	public void updateData(HotlineDataWeb data) throws SQLException {
+		
+		try {
+			
+			pst = conn.prepareStatement("Update table calldata datum=?, jegyszam=?, jegyet_nyitotta=?, technikus_neve=?, standort=?, linie=?, jegyet_zarta=?, visszahivott=? where telefonszama=?");
+			
+			pst.setDate(1, Date.valueOf(data.getDate()));
+			pst.setInt(2, data.getSdNumber());
+			pst.setString(3, data.getOpenedFrom());
+			pst.setString(4, data.getTechnicianName());
+			pst.setString(5, data.getLocalizationNumber());
+			pst.setInt(6, data.getLineNumber());
+			pst.setString(7, data.getClosedFrom());
+			pst.setBoolean(8, data.isClosed());
+			pst.setString(9, data.getPhoneNumber());
+			
+			pst.executeUpdate();
+			
+			pst.clearParameters();
+			
+		} catch (Exception e) {
+			throw new SQLException("Hiba az adatok frissítésekor: "+e.getMessage());
+		}
+		
+		
+		
+	}
+	
+	public void deleteData(HotlineDataWeb data) throws SQLException {
+		
+		try {
+			
+			pst =conn.prepareStatement("Delete from calldata where telefonszama=?");
+			pst.setString(9, data.getPhoneNumber());
+			
+			pst.executeUpdate();
+			
+			pst.clearParameters();
+			
+			
+		} catch (Exception e) {
+			throw new SQLException("Hiba az adatok törlésekor: "+e.getMessage());
+		}
+		
+	}
+
+	public HotlineDataWeb getOneRow(int sdNumber) throws SQLException {
+	
+		
+		HotlineDataWeb data = null;
+		
+		try {
+			pst = conn.prepareStatement("Select * from calldata where jegyszam=?");
+			pst.setInt(1, sdNumber);
+			
+			ResultSet res = pst.executeQuery();
+			
+			if(res.next()) {
+				
+				data = new HotlineDataWeb((res.getDate("datum").toLocalDate()), res.getInt("jegyszam"), res.getString("jegyet_nyitotta"), res.getString("technikus_neve"), res.getString("telefonszama"), res.getString("standort"), res.getInt("linie"), res.getString("jegyet_zarta"), res.getBoolean("visszahivott"));
+				
+			}
+			
+			res.close();
+			pst.clearParameters();
+			
+		} catch (Exception e) {
+			throw new SQLException("Hiba az adatok módosításakor: "+e.getMessage());
+		}
+
+		return data;
 	}
 	
 	
