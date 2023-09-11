@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hun">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adatok módosítása</title>
+</head>
+<body>
+    <h1>Módosítás</h1>
+    <br></br>
+    <form action="updatePage.html"  method="post">
+    <div>
+        <label>Jegyet nyitotta:</label><input type="text" th:value="${selectedData.openedFrom}" name="openedFrom" id="opened-from">
+    </div>
+    <br></br>
+    <div>
+        <label>Techniker:</label><input type="text" th:value="${selectedData.technicianName}" name="technicianName" id="technician-name">
+    </div>
+    <br></br>
+    <div>
+        <label>Standort oder VPSZ Nummer 49/:</label><input type="text" th:value="${selectedData.localizationNumber}" name="localizationNumber" id="vpsz-number">
+    </div>
+    <br></br>
+    <div>
+        <label>Telefonnummer:</label><input type="text" th:value="${selectedData.phoneNumber}" name="phoneNumber" id="phone-number">
+    </div>
+    <br></br>
+    <div>
+        <label>Linie:</label>
+        <select th:field="*{selectedData.lineNumber}" name="lineNumber"  id="line-number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+    </div>
+    <br></br>
+    <div>
+        <label>SD Nummer:</label><input type="number" th:value="${selectedData.sdNumber}" name="sdNumber" id="sd-number">
+    </div>
+    <br></br>
+    <div>
+        <label>Jegyet zárta:</label><input type="text" th:value="${selectedData.closedFrom}" name="closedFrom" id="closed-from">
+    </div>
+    <br></br>
+    <div>
+        <label>Visszatelefonált már?</label>
+        <input type="checkbox" name="isClosed" id="isClosed" th:checked="${selectedData.isClosed}">
+    </div>
+    <br></br>
+    <button id="save">Mentés</button>
+    </form>
+</body>
+</html>

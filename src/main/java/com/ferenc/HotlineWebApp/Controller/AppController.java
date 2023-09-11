@@ -60,9 +60,8 @@ public class AppController {
 		
 		HotlineDataWeb hotlineData = dService.getSingleData(sdNumber);
 		
-		
-		System.out.println(hotlineData.toString());
-		return "tablePage";
+		model.addAttribute("selectedData", hotlineData);
+		return "updatePage";
 		
 	}
 	
