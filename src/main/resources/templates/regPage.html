@@ -23,9 +23,15 @@
     </div>
     <br></br>
     <div>
-        <button>Davin/Icinga</button>
-        <label for="davin-number">Davin:</label><input type="text" name="davin-number" id="davin-number">
+        <button type="button" onclick="replaceSlash()">Icinga</button>
         <label for="icinga-number">Icinga:</label><input type="text" name="icinga-number" id="icinga-number">
+        <script>
+            function replaceSlash() {
+                var localizationNumber = document.getElementById("vpsz-number").value;
+                var replacedText = localizationNumber.replace(/\//g, "-");
+                document.getElementById("icinga-number").value = "-"+replacedText+"-";
+            }
+        </script>
     </div>
     <br></br>
     <div>
@@ -66,7 +72,7 @@
         <input type="checkbox" name="isClosed" id="isClosed" th:checked="${isClosed}">
     </div>
     <br></br>
-    <button id="save">Mentés táblázatba</button>
+    <button type="submit" id="save">Mentés táblázatba</button>
     </form>
 </body>
 </html>
