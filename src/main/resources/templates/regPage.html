@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adatok rögzítése</title>
+    <link th:href="@{/css/regStyle.css}" href="../static/css/regStyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h1>Hívásadatok rögzítése</h1>
     <br></br>
     
-    <form action=""  method="post">
+    <form action=""  method="post" onsubmit="return validateForm()" name="regForm">
     <div>
         <label for="openedFrom">Jegyet nyitotta:</label><input type="text"  name="openedFrom" id="opened-from">
     </div>
@@ -74,5 +75,20 @@
     <br></br>
     <button type="submit" id="save">Mentés táblázatba</button>
     </form>
+    <script>
+        function validateForm() {
+        var opener = document.forms["regForm"]["openedFrom"].value;
+        var technician = document.forms["regForm"]["technicianName"].value;
+        var localNr = document.forms["regForm"]["localizationNumber"].value;
+        var phoneNr = document.forms["regForm"]["phoneNumber"].value;
+        var sdNr = document.forms["regForm"]["sdNumber"].value;
+        var closener = document.forms["regForm"]["closedFrom"].value;
+
+        if (opener == "" || technician == "" || localNr == "" || phoneNr == "" || sdNr == "" || closener == "") {
+        alert("Az összes mező kitöltése kötelező!");
+        return false;
+            }
+        }
+    </script>
 </body>
 </html>

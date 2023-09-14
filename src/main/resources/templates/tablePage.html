@@ -31,9 +31,18 @@
                 <td th:text="${data.localizationNumber}"></td>
                 <td th:text="${data.lineNumber}"></td>
                 <td th:text="${data.closedFrom}"></td>
-                <td><input type="checkbox" name="selectedData" aria-selected="true" th:value="${data.sdNumber}"></td>
+                <td><input type="checkbox" name="selectedData" aria-selected="true" th:value="${data.sdNumber}" onclick="toggleCheckbox(this)"></td>
             </tr>
         </table>
+        <script>
+            function toggleCheckbox(checkbox) {
+                var checkboxes = document.getElementsByName('selectedData');
+                checkboxes.forEach(function(item) {
+                    if (item !== checkbox) item.checked = false;
+                });
+            }
+            </script>
+            
         <button type="submit">Kijelölt sor módosítása</button>
     </div>
     </form>
