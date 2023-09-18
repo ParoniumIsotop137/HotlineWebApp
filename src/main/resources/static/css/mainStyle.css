@@ -1,6 +1,7 @@
-h1{
+h1 {
 
     text-align: center;
+    color: blue;
 }
 .buttons-cont{
 
@@ -11,10 +12,38 @@ h1{
 
 }
 
+body{
+    
+    background-color: cadetblue;
+
+}
+
 #toRegPage, #toTablePage{
+
     background-color: blue;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:italic;
+    font-weight: bold;
+    font-size: larger;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+#toRegPage {
+
+    margin-right: 100px;
+
+}
+.backgp {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    border-style:outset;
+    border-color: brown;
+    border-width: 20px;
+
+
 }

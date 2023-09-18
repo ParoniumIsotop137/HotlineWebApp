@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adatok módosítása</title>
+    <link th:href="@{/css/updatePageStyle.css}" href="../static/css/updatePageStyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h1>Módosítás</h1>
@@ -65,5 +66,6 @@
         <input type="hidden" name="sdNumber" th:value="${selectedData.sdNumber}">
         <button type="submit" id="delete">Adatok törlése</button>
     </form>
+    <a href="http://localhost:8080/hotlinehome"><button id="toHomePage">Vissza a kezdőlapra</button></a>
 </body>
 </html>

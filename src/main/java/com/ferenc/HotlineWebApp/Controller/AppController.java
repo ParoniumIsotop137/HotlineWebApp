@@ -41,7 +41,7 @@ public class AppController {
 		
 		dService.saveData(data);
 		
-		return "regPage";
+		return "confirmPage";
 		
 	}
 	
@@ -80,7 +80,6 @@ public class AppController {
 	@PostMapping("/delete")
 	public String deleteSelectedData(@ModelAttribute("selectedData") HotlineDataWeb data) {
 		
-		System.out.println(data.getSdNumber());
 		dService.deleteData(data.getSdNumber());
 		
 		return "confirmPage";
