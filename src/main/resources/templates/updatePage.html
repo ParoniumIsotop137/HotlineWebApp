@@ -28,7 +28,7 @@
     <br></br>
     <div>
         <label>Linie:</label>
-        <select th:field="*{selectedData.lineNumber}" name="lineNumber"  id="line-number">
+        <select th:field="*{selectedData.lineNumber}" name="lineNumber"  id="line-number" class="lineNumber">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -57,7 +57,7 @@
     <br></br>
     <div>
         <label>Visszatelefonált már?</label>
-        <input type="checkbox" name="isClosed" id="isClosed" th:checked="${selectedData.isClosed}">
+        <input type="checkbox" name="isClosed" id="isClosed" class="chBox" th:checked="${selectedData.isClosed}">
     </div>
     <br></br>
     <button id="save">Mentés</button>

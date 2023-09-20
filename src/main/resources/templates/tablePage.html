@@ -11,7 +11,7 @@
     <br></br>
     <form action="/update" method="post">
     <div>
-        <table>
+        <table class="tblCallData">
             <tr>
                 <th>Dátum:</th>
                 <th>Jegyszám:</th>
@@ -31,7 +31,7 @@
                 <td th:text="${data.localizationNumber}"></td>
                 <td th:text="${data.lineNumber}"></td>
                 <td th:text="${data.closedFrom}"></td>
-                <td><input type="checkbox" name="selectedData" aria-selected="true" th:value="${data.sdNumber}" onclick="toggleCheckbox(this)"></td>
+                <td><input type="checkbox" name="selectedData" class="chkSelect" aria-selected="true" th:value="${data.sdNumber}" onclick="toggleCheckbox(this)"></td>
             </tr>
         </table>
         <script>
@@ -42,10 +42,10 @@
                 });
             }
             </script>
-            
-        <button type="submit">Kijelölt sor módosítása</button>
+        <br></br>    
+        <button type="submit" class="btnModify">Kijelölt sor módosítása</button>
     </div>
     </form>
-    <a href="http://localhost:8080/hotlinehome"><button id="toHomePage">Vissza a kezdőlapra</button></a>
+    <a href="http://localhost:8080/hotlinehome"><button id="toHomePage" class="btnHomePage" >Vissza a kezdőlapra</button></a>
 </body>
 </html>
