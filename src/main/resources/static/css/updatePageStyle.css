@@ -55,3 +55,54 @@ input {
     width: 20px;
 
 }
+
+.btnSave {
+
+    background-color: burlywood;
+    color:darkred;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 100px;
+   
+    width: 130px;
+    border-style:ridge;
+    border-width: 4px;
+    border-color: darkblue;
+
+}
+
+.btnDelete{
+
+    background-color: burlywood;
+    color:darkred;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 130px;
+    border-style:ridge;
+    border-width: 4px;
+    border-color: darkblue;
+
+}
+
+.btnHomePage {
+
+
+    background-color: burlywood;
+    color:darkred;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 900px;
+    width: 130px;
+    border-style:ridge;
+    border-width: 4px;
+    border-color: darkblue;
+
+}

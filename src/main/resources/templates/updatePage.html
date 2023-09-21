@@ -60,12 +60,12 @@
         <input type="checkbox" name="isClosed" id="isClosed" class="chBox" th:checked="${selectedData.isClosed}">
     </div>
     <br></br>
-    <button id="save">Mentés</button>
+    <button id="save" class="btnSave">Mentés</button>
     </form>
     <form action="/delete" method="post">
         <input type="hidden" name="sdNumber" th:value="${selectedData.sdNumber}">
-        <button type="submit" id="delete">Adatok törlése</button>
+        <button type="submit" id="delete" class="btnDelete">Adatok törlése</button>
     </form>
-    <a href="http://localhost:8080/hotlinehome"><button id="toHomePage">Vissza a kezdőlapra</button></a>
+    <a href="http://localhost:8080/hotlinehome"><button id="toHomePage" class="btnHomePage">Vissza a kezdőlapra</button></a>
 </body>
 </html>
