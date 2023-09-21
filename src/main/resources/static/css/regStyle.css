@@ -43,11 +43,47 @@ input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-block;
     font-weight: bold;
-    font-style: italic;
     margin-left: 100px;
     width: 120px;
-    border-style:outset;
+    border-style:ridge;
     border-width: 4px;
     border-color: darkblue;
 
 }
+.lineNumber {
+
+    background-color: beige;
+    height: 30px;
+    width: 50px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:blue;
+
+}
+
+.chBox {
+
+    background-color: beige;
+    height: 20px;
+    width: 20px;
+
+}
+
+.btnSave {
+
+    background-color: burlywood;
+    color:darkred;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 100px;
+    width: 130px;
+    border-style:ridge;
+    border-width: 4px;
+    border-color: darkblue;
+
+}
+

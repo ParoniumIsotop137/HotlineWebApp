@@ -1,0 +1,30 @@
+h1{
+
+    color:forestgreen;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+body {
+
+    background-color:lightsteelblue;
+
+}
+
+.btnHomePage {
+
+
+    background-color: burlywood;
+    color:darkred;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 900px;
+    width: 130px;
+    border-style:ridge;
+    border-width: 4px;
+    border-color: darkblue;
+
+}

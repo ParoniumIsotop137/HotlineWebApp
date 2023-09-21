@@ -42,7 +42,7 @@
     <br></br>
     <div>
         <label>Linie:</label>
-        <select for="lineNumber" name="lineNumber"  id="line-number">
+        <select for="lineNumber" name="lineNumber"  id="line-number" class="lineNumber">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -71,10 +71,10 @@
     <br></br>
     <div>
         <label for="isClosed">Visszatelefonált már?</label>
-        <input type="checkbox" name="isClosed" id="isClosed" th:checked="${isClosed}">
+        <input type="checkbox" name="isClosed" class="chBox" id="isClosed" th:checked="${isClosed}">
     </div>
     <br></br>
-    <button type="submit" id="save">Mentés táblázatba</button>
+    <button type="submit" class="btnSave" id="save">Mentés táblázatba</button>
     </form>
     <script>
         function validateForm() {
